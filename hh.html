@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* تغيير لون الخلفية إلى أبيض */
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 10px;
+            color: #f44336;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #777;
+        }
+        .welcome {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="welcome">Welcome to souhaib wibe site
+    </div>
+    <h2>Login Form</h2>
+    <input type="text" id="username" placeholder="Enter your username">
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="login()">Login</button>
+    <div class="message" id="message"></div>
+    <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot your password?</a>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Dummy credentials check (replace with actual authentication logic)
+        if (username === 'user' && password === 'password') {
+            document.getElementById('message').textContent = 'Login successful!';
+        } else {
+            document.getElementById('message').textContent = 'Invalid credentials.';
+        }
+    }
+
+    function forgotPassword() {
+        alert('Redirecting to password reset page...'); // Replace with actual redirection logic
+        // window.location.href = 'reset_password.html'; // Uncomment this line to redirect
+    }
+
+</body>
+</html>
